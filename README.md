@@ -1,70 +1,74 @@
-# UserManager
+# User Manager
 
-## Description
-UserManager is a web application that allows users to register, edit their usernames, and view the total number of registered users. The project follows a simple CRUD (Create, Read, Update, Delete) operation for user management.
-
-## Technologies Used
-### Frontend:
-- HTML
-- CSS (Bootstrap for styling)
-- Embedded JavaScript (EJS) for templating
-
-### Backend:
-- **Node.js**: Runtime environment for executing JavaScript code.
-- **Express.js**: Web framework for handling routes and requests.
-- **MySQL2**: Database for storing user details.
-- **dotenv**: For managing environment variables.
-- **bcrypt**: For password hashing.
-- **method-override**: To support PUT and DELETE requests in HTML forms.
+## Overview
+User Manager is a web-based application that allows users to register, edit their usernames, and manage user data efficiently.
 
 ## Features
-- User registration with email, username, and password.
-- Secure password storage using bcrypt.
-- View the total number of registered users.
-- Edit username with password authentication.
-- Responsive UI with Bootstrap.
+- User Registration
+- Edit Username
+- Display All Users
+- Count Total Users
+
+## Technologies Used
+### **Frontend:**
+- HTML
+- Bootstrap
+
+### **Backend:**
+- Node.js
+- Express.js
+- EJS (Embedded JavaScript Templates)
+- MySQL (Database)
+- bcrypt (for password hashing)
+- dotenv (for environment variables)
+- method-override (to support PUT and DELETE requests in forms)
 
 ## Installation
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/Nazimxc/UserManager.git
-   ```
-2. Navigate to the project directory:
-   ```sh
-   cd UserManager
-   ```
-3. Install dependencies:
-   ```sh
-   npm install
-   ```
-4. Create a `.env` file in the root directory and add your database credentials:
-   ```env
-   DB_HOST=localhost
-   DB_USER=root
-   DB_PASSWORD=yourpassword
-   DB_NAME=usermanager
-   ```
-5. Run the application:
-   ```sh
-   npm start
-   ```
-6. Open `http://localhost:8000` in your browser.
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Nazimxc/UserManager.git
+cd UserManager
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Set Up Environment Variables
+Create a `.env` file in the root directory and add your database credentials:
+```env
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=yourpassword
+DB_NAME=usermanager
+SESSION_SECRET=your_secret_key
+```
+
+### 4. Run the Server
+```bash
+node index.js
+```
+Or if using nodemon:
+```bash
+nodemon index.js
+```
 
 ## API Endpoints
-| Method | Endpoint          | Description         |
-|--------|------------------|---------------------|
-| GET    | `/`              | Home page          |
-| GET    | `/user`          | Show all users     |
-| GET    | `/user/new`      | Add new user form  |
-| POST   | `/user/new`      | Create a new user  |
-| GET    | `/user/:id/edit` | Edit username form |
-| PATCH  | `/user/:id`      | Update username    |
+| Method | Endpoint          | Description          |
+|--------|------------------|----------------------|
+| GET    | `/`              | Homepage            |
+| GET    | `/user`          | List all users      |
+| POST   | `/user/new`      | Add a new user      |
+| GET    | `/user/:id/edit` | Edit a user         |
+| PATCH  | `/user/:id`      | Update user details |
 
-## Contributing
-Feel free to fork this repository and submit pull requests.
 
 ## License
 This project is licensed under the MIT License.
+
+
 
 ![totaluser](https://github.com/user-attachments/assets/01134079-7eea-4ffc-8321-e74023e2555b)
 ![listtuser](https://github.com/user-attachments/assets/9b3389c4-0dc4-40fb-bdbe-e749c286e02a)
